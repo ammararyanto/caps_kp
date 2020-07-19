@@ -265,8 +265,8 @@
 
                 </h6>
                 <h6 class="text-center">
-                    Developed By : <a href="http://www.slpatmdnt.com/" target="_blank" class="txt-cyan"> SLPATMDNT </a> <br>
-                    Design By : <a href="https://www.instagram.com/ardiyaars/" target="_blank" class="txt-cyan"> Ardiya Ars </a>
+                    Developed By : <a href="https://www.instagram.com/slpatmdnt/" target="_blank" class="txt-cyan"> Masadi Kurniawan </a> <br>
+                    <a href="https://www.instagram.com/ammararyanto/" target="_blank" class="txt-cyan"> Ammar Aryanto </a>
                 </h6>
             </div>
         </div>
