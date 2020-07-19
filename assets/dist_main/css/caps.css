@@ -166,7 +166,7 @@ html{
     border: 4px solid #343a40;
 }
 .container.bg-hardware{
-    background-image: url('../../image/icon/hardware.png'),url('../../image/icon/hardware.png');
+    background-image: url('../../../Image/icon/hardware.png'),url('../../../Image/icon/hardware.png');
     background-repeat: repeat-y, repeat-y;
     background-size: 50px,50px;
     background-position: left,right;
@@ -266,15 +266,15 @@ html{
 
 
   .li-kenapa{
-      list-style-image: url('../../image/icon/rsz_check.png');
+      list-style-image: url('../../../Image/icon/rsz_check.png');
   }
 
   .li-jadi{
-      list-style-image: url('../../image/icon/checklist_green.png');
+      list-style-image: url('../../../Image/icon/checklist_green.png');
   }
 
   .li-servis{
-    list-style-image: url('../../image/icon/right_arrow.png');
+    list-style-image: url('../../../Image/icon/right_arrow.png');
   }
 
   
