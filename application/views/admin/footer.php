@@ -340,7 +340,7 @@ if (empty($timeStart) || empty($timeEnd) || empty($selisih)) {
 </script>
 
 <!-- auto refreh page -->
-<script>
+<!-- <script>
     (function(seconds) {
         var refresh,
             intvrefresh = function() {
@@ -356,7 +356,7 @@ if (empty($timeStart) || empty($timeEnd) || empty($selisih)) {
         intvrefresh();
 
     }(90));
-</script>
+</script> -->
 
 <!-- search js kasir -->
 <script>
