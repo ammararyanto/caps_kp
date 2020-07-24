@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row txt-sm-center">
                 <div class="col-md-6 m-auto">
-                    <img src="<?= base_url() ?>Image/caps_logo.svg" class="img-fluid wow zoomIn">
+                    <img src="<?= base_url() ?>image/caps_logo.svg" class="img-fluid wow zoomIn">
                 </div>
                 <div class="col-md-6 m-auto">
                     <h4 class="txt-upper txt-grey wow fadeInUp" data-wow-delay="1s">Candra Apple Solution</h4>
@@ -26,7 +26,7 @@
         <div class="row pt-2 pb-2">
             <div class="col-md-12 wow zoomIn">
                 <h5 class="txt-center">Perkenalkan <br>
-                    <img src="<?= base_url() ?>Image/icon/apple.png" style="height: 40px;" class="img-fluid">
+                    <img src="<?= base_url() ?>image/icon/apple.png" style="height: 40px;" class="img-fluid">
                 </h5>
                 <h2 class="txt-grey txt-center font-weight-bold"><span class="txt-blue">CAPS</span> Jasa Servis Apple Terbaik <br>
                     Untuk Mengatasi Masalah Produk Apple Anda</h2>
@@ -45,7 +45,7 @@
                 <div class="col-md-6 wow zoomIn">
                     <div class="row">
                         <div class="col-md-3 m-auto pt-3 text-center">
-                            <img src="<?= base_url() ?>Image/icon/hourglass.png" class="img-fluid img-100">
+                            <img src="<?= base_url() ?>image/icon/hourglass.png" class="img-fluid img-100">
                         </div>
                         <div class="col-md-9 m-auto pt-3">
                             <h4>Proses Cepat</h4>
@@ -57,7 +57,7 @@
                 <div class="col-md-6 wow zoomIn">
                     <div class="row">
                         <div class="col-md-3 m-auto pt-3 text-center">
-                            <img src="<?= base_url() ?>Image/icon/apple2.png" class="img-fluid img-100">
+                            <img src="<?= base_url() ?>image/icon/apple2.png" class="img-fluid img-100">
                         </div>
                         <div class="col-md-9 m-auto pt-3">
                             <h4>Apple Repair Specialist</h4>
@@ -70,7 +70,7 @@
                 <div class="col-md-6 wow zoomIn">
                     <div class="row">
                         <div class="col-md-3 m-auto pt-3 text-center">
-                            <img src="<?= base_url() ?>Image/icon/money.png" class="img-fluid img-100">
+                            <img src="<?= base_url() ?>image/icon/money.png" class="img-fluid img-100">
                         </div>
                         <div class="col-md-9 m-auto pt-3">
                             <h4>No charge at all</h4>
@@ -82,7 +82,7 @@
                 <div class="col-md-6 wow zoomIn">
                     <div class="row">
                         <div class="col-md-3 m-auto pt-3 text-center">
-                            <img src="<?= base_url() ?>Image/icon/like.png" class="img-fluid img-100">
+                            <img src="<?= base_url() ?>image/icon/like.png" class="img-fluid img-100">
                         </div>
                         <div class="col-md-9 m-auto pt-3">
                             <h4>Bergaransi</h4>
@@ -93,7 +93,7 @@
                 <div class="col-md-6 wow zoomIn">
                     <div class="row">
                         <div class="col-md-3 m-auto pt-3 text-center">
-                            <img src="<?= base_url() ?>Image/icon/teknisi.png" class="img-fluid img-100">
+                            <img src="<?= base_url() ?>image/icon/teknisi.png" class="img-fluid img-100">
                         </div>
                         <div class="col-md-9 m-auto pt-3">
                             <h4>Expert Technician</h4>
@@ -105,7 +105,7 @@
                 <div class="col-md-6 wow zoomIn">
                     <div class="row">
                         <div class="col-md-3 m-auto pt-3 text-center">
-                            <img src="<?= base_url() ?>Image/icon/hardware2.png" class=" img-fluid img-100">
+                            <img src="<?= base_url() ?>image/icon/hardware2.png" class=" img-fluid img-100">
                         </div>
                         <div class="col-md-9 m-auto pt-3">
                             <h4>Hardware Specialist</h4>
@@ -117,7 +117,7 @@
                 <div class="col-md-6 wow zoomIn">
                     <div class="row">
                         <div class="col-md-3 m-auto pt-3 text-center">
-                            <img src="<?= base_url() ?>Image/icon/check_up.png" class="img-fluid img-100">
+                            <img src="<?= base_url() ?>image/icon/check_up.png" class="img-fluid img-100">
                         </div>
                         <div class="col-md-9 m-auto pt-3">
                             <h4>Free Check Up</h4>
@@ -129,7 +129,7 @@
                 <div class="col-md-6 wow zoomIn">
                     <div class="row">
                         <div class="col-md-3 m-auto pt-3 text-center">
-                            <img src="<?= base_url() ?>Image/icon/check_credible.png" class="img-fluid img-100">
+                            <img src="<?= base_url() ?>image/icon/check_credible.png" class="img-fluid img-100">
                         </div>
                         <div class="col-md-9 m-auto pt-3">
                             <h4>Trusted and Credible</h4>
@@ -159,7 +159,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?= base_url() ?>Image/kenapa.jpg" class="img-fluid wow zoomIn" data-wow-delay="1s">
+                <img src="<?= base_url() ?>image/kenapa.jpg" class="img-fluid wow zoomIn" data-wow-delay="1s">
             </div>
             <div class="col-md-6 m-auto">
                 <h2 class="txt-blue wow fadeInUp" data-wow-delay="1.2s">Sebentar!</h2>
@@ -188,7 +188,7 @@
         <div class="row m-5">
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="card mt-5 no-border shadow wow zoomIn" data-wow-delay="0.5s">
-                    <div class="img-bg card-img-top" style="background-image:  url('<?= base_url() ?>Image/icon/security.png') ;"></div>
+                    <div class="img-bg card-img-top" style="background-image:  url('<?= base_url() ?>image/icon/security.png') ;"></div>
                     <div class="card-body text-center">
                         <h5 class="card-title ">Keamanan Sistem</h5>
                         <p class="card-text">Salah satu teknologi gadget yang super canggih dibagian keamanan sistem pada iOS yang biasa kita sebut keamanan iCloud.</p>
@@ -197,7 +197,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="card mt-5 no-border shadow wow zoomIn " data-wow-delay="0.9s">
-                    <div style="background-image:  url('<?= base_url() ?>Image/icon/apple.png') ;" class="img-bg card-img-top"></div>
+                    <div style="background-image:  url('<?= base_url() ?>image/icon/apple.png') ;" class="img-bg card-img-top"></div>
                     <div class="card-body text-center">
                         <h5 class="card-title">Fitur Yang Inovatif</h5>
                         <p class="card-text">Fitur yang diberikan oleh Apple salah satu keunggulan teknologi gadget yang menunjang sistem operasi modern.</p>
@@ -206,7 +206,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="card mt-5 no-border shadow wow zoomIn" data-wow-delay="1.3s">
-                    <div style="background-image:  url('<?= base_url() ?>Image/icon/design.png') ;" class="img-bg card-img-top"></div>
+                    <div style="background-image:  url('<?= base_url() ?>image/icon/design.png') ;" class="img-bg card-img-top"></div>
                     <div class="card-body text-center">
                         <h5 class="card-title">Desain</h5>
                         <p class="card-text">Produk Apple dikenal memiliki desain yang khas dan elegan. Desain yg khas ini terdapat pada semua produk Apple.</p>
@@ -215,7 +215,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="card mt-5 no-border shadow wow zoomIn" data-wow-delay="1.7s">
-                    <div style="background-image:  url('<?= base_url() ?>Image/icon/hardware-black.png') ;" class="img-bg card-img-top"></div>
+                    <div style="background-image:  url('<?= base_url() ?>image/icon/hardware-black.png') ;" class="img-bg card-img-top"></div>
                     <div class="card-body text-center">
                         <h5 class="card-title ">Software & Hardware</h5>
                         <p class="card-text">Perangkat keras produksi Apple dikenal canggih dan stabil. Apple jarang sekali menemukan bug atau malware.</p>
@@ -235,7 +235,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="<?= base_url() ?>Image/jadi.png" class="img-fluid wow zoomIn" data-wow-delay="1s">
+                <img src="<?= base_url() ?>image/jadi.png" class="img-fluid wow zoomIn" data-wow-delay="1s">
             </div>
             <div class="col-md-6 m-auto">
                 <h2 class="txt-blue wow fadeInUp txt-sm-center" data-wow-delay="1.2s">Jadi ...</h2>
@@ -262,7 +262,7 @@
         </div>
         <div class="row">
             <div class="col-md-3 m-auto">
-                <img src="<?= base_url() ?>Image/replacement_part.png" class="img-fluid" alt="">
+                <img src="<?= base_url() ?>image/replacement_part.png" class="img-fluid" alt="">
             </div>
             <div class="col-md-9 m-auto">
                 <div class="row">
@@ -301,7 +301,7 @@
         </div>
         <div class="row">
             <div class="col-md-3 m-auto">
-                <img src="<?= base_url() ?>Image/software_service.png" class="img-fluid" alt="">
+                <img src="<?= base_url() ?>image/software_service.png" class="img-fluid" alt="">
             </div>
             <div class="col-md-9 m-auto">
                 <div class="row">
@@ -331,7 +331,7 @@
         </div>
         <div class="row">
             <div class="col-md-3 m-auto">
-                <img src="<?= base_url() ?>Image/hardware3.png" class="img-fluid" alt="">
+                <img src="<?= base_url() ?>image/hardware3.png" class="img-fluid" alt="">
             </div>
             <div class="col-md-9 m-auto">
                 <div class="row">
@@ -381,7 +381,7 @@
                 <div class="card card-produk mb-3 m-auto ">
                     <div class="row no-gutters">
                         <div class="col-md-6 m-auto">
-                            <img src="<?= base_url() ?>Image/product/iPhone.png" class="card-img" alt="...">
+                            <img src="<?= base_url() ?>image/product/iPhone.png" class="card-img" alt="...">
                         </div>
                         <div class="col-md-6 m-auto">
                             <div class="card-body">
@@ -402,7 +402,7 @@
                 <div class="card card-produk mb-3 m-auto ">
                     <div class="row no-gutters">
                         <div class="col-md-6 m-auto">
-                            <img src="<?= base_url() ?>Image/product/ipad.png" class="card-img " alt="...">
+                            <img src="<?= base_url() ?>image/product/ipad.png" class="card-img " alt="...">
                         </div>
                         <div class="col-md-6 m-auto">
                             <div class="card-body">
@@ -420,7 +420,7 @@
                 <div class="card card-produk mb-3 m-auto ">
                     <div class="row no-gutters">
                         <div class="col-md-6 m-auto">
-                            <img src="<?= base_url() ?>Image/product/macbook.png" class="card-img" alt="...">
+                            <img src="<?= base_url() ?>image/product/macbook.png" class="card-img" alt="...">
                         </div>
                         <div class="col-md-6 m-auto">
                             <div class="card-body">
@@ -437,7 +437,7 @@
                 <div class="card card-produk mb-3 m-auto ">
                     <div class="row no-gutters">
                         <div class="col-md-6 m-auto">
-                            <img src="<?= base_url() ?>Image/product/iMac.png" class="card-img " alt="...">
+                            <img src="<?= base_url() ?>image/product/iMac.png" class="card-img " alt="...">
                         </div>
                         <div class="col-md-6 m-auto">
                             <div class="card-body">
@@ -453,7 +453,7 @@
                 <div class="card card-produk mb-3 m-auto ">
                     <div class="row no-gutters">
                         <div class="col-md-6 m-auto">
-                            <img src="<?= base_url() ?>Image/product/iwatch.png" class="card-img" alt="...">
+                            <img src="<?= base_url() ?>image/product/iwatch.png" class="card-img" alt="...">
                         </div>
                         <div class="col-md-6 m-auto">
                             <div class="card-body">
@@ -502,10 +502,10 @@
                 <div class="col-md-6 col-sm-6 p-3">
                     <div class="card barang shadow m-auto wow zoomIn">
                         <?php if ($cb[0] == 1) : ?>
-                            <img src="<?= base_url() ?>Image/icon/best_seller.png" class="img-badge" alt="">
+                            <img src="<?= base_url() ?>image/icon/best_seller.png" class="img-badge" alt="">
                         <?php else : ?>
                         <?php endif; ?>
-                        <div style="background-image: url('<?= base_url() ?>Image/barang/<?= $cb[1] ?>'); background-size: contain;" class="card-img-top img-bg"></div>
+                        <div style="background-image: url('<?= base_url() ?>image/barang/<?= $cb[1] ?>'); background-size: contain;" class="card-img-top img-bg"></div>
                         <div class="card-body">
                             <h5 class="card-title"><?= $cb[2] ?></h5>
                             <p class="txt-yellow">
@@ -533,10 +533,10 @@
                 <div class="col-md-4 col-sm-6 p-2">
                     <div class="card barang shadow m-auto wow zoomIn">
                         <?php if ($aksesoris[0] == 1) : ?>
-                            <img src="<?= base_url() ?>Image/icon/best_seller.png" class="img-badge" alt="">
+                            <img src="<?= base_url() ?>image/icon/best_seller.png" class="img-badge" alt="">
                         <?php else : ?>
                         <?php endif; ?>
-                        <div style="background-image: url('<?= base_url() ?>Image/barang/<?= $aksesoris[1] ?>'); background-size: contain;" class="card-img-top img-bg"></div>
+                        <div style="background-image: url('<?= base_url() ?>image/barang/<?= $aksesoris[1] ?>'); background-size: contain;" class="card-img-top img-bg"></div>
                         <div class="card-body">
                             <h5 class="card-title"><?= $aksesoris[2] ?></h5>
                             <p class="txt-yellow">
@@ -557,10 +557,10 @@
             <div class="col-md-12">
                 <div class="row">
                     <span class="m-auto">
-                        <img src="<?= base_url() ?>Image/logo_brand/bni.png" class="img-fluid m-3" style="width: 100px; height:auto;" alt="">
-                        <img src="<?= base_url() ?>Image/logo_brand/bca.png" class="img-fluid m-3" style="width: 100px; height:auto;" alt="">
-                        <img src="<?= base_url() ?>Image/logo_brand/bri.png" class="img-fluid m-3" style="width: 100px; height:auto;" alt="">
-                        <img src="<?= base_url() ?>Image/logo_brand/mandiri.png" class="img-fluid m-3" style="width: 100px; height:auto;" alt="">
+                        <img src="<?= base_url() ?>image/logo_brand/bni.png" class="img-fluid m-3" style="width: 100px; height:auto;" alt="">
+                        <img src="<?= base_url() ?>image/logo_brand/bca.png" class="img-fluid m-3" style="width: 100px; height:auto;" alt="">
+                        <img src="<?= base_url() ?>image/logo_brand/bri.png" class="img-fluid m-3" style="width: 100px; height:auto;" alt="">
+                        <img src="<?= base_url() ?>image/logo_brand/mandiri.png" class="img-fluid m-3" style="width: 100px; height:auto;" alt="">
                     </span>
                 </div>
             </div>
@@ -581,7 +581,7 @@
                 </h1>
             </div>
             <div class="col-md-6 m-auto">
-                <img src="<?= base_url() ?>Image/cobacoba.png" class="img-fluid" style="width: 400px;height: 500px;">
+                <img src="<?= base_url() ?>image/cobacoba.png" class="img-fluid" style="width: 400px;height: 500px;">
             </div>
             <div class="col-md-6 text-white  text-center m-auto">
                 <h4 style="color: #37bdd2;">Promo akan berakhir dalam :</h4>
@@ -646,7 +646,7 @@
                                 </p>
                                 <div class="row">
                                     <div class="col-sm-2 m-auto">
-                                        <img src="<?= base_url() ?>Image/profil/valent_profil.png" style="width: 70px;height:100%;" class="img-round" alt="">
+                                        <img src="<?= base_url() ?>image/profil/valent_profil.png" style="width: 70px;height:100%;" class="img-round" alt="">
                                     </div>
                                     <div class="col-sm-10 m-auto">
                                         <h5>Valent Fun</h5>
@@ -656,7 +656,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="img-bg border-right-3" style="background-image:  url('<?= base_url() ?>Image/profil/valent.jpg') ;"></div>
+                            <div class="img-bg border-right-3" style="background-image:  url('<?= base_url() ?>image/profil/valent.jpg') ;"></div>
                         </div>
                     </div>
                 </div>
@@ -682,7 +682,7 @@
                                 </p>
                                 <div class="row">
                                     <div class="col-sm-2 m-auto">
-                                        <img src="<?= base_url() ?>Image/profil/dr_reta_profil.png" style="width: 70px;height:100%;" class="img-round" alt="">
+                                        <img src="<?= base_url() ?>image/profil/dr_reta_profil.png" style="width: 70px;height:100%;" class="img-round" alt="">
                                     </div>
                                     <div class="col-sm-10 m-auto">
                                         <h5>Dr Reta</h5>
@@ -692,7 +692,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="img-bg border-right-3" style="background-image:  url('<?= base_url() ?>Image/profil/drreta.jpg') ;"></div>
+                            <div class="img-bg border-right-3" style="background-image:  url('<?= base_url() ?>image/profil/drreta.jpg') ;"></div>
                         </div>
                     </div>
                 </div>
@@ -721,7 +721,7 @@
                                 </p>
                                 <div class="row">
                                     <div class="col-sm-2 m-auto">
-                                        <img src="<?= base_url() ?>Image/profil/dion_profil.png" style="width: 70px;height:100%;" class="img-round" alt="">
+                                        <img src="<?= base_url() ?>image/profil/dion_profil.png" style="width: 70px;height:100%;" class="img-round" alt="">
                                     </div>
                                     <div class="col-sm-10 m-auto">
                                         <h5>Dion</h5>
@@ -731,7 +731,7 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <div class="img-bg border-right-3" style="background-image:  url('<?= base_url() ?>Image/profil/dion.jpg') ;"></div>
+                            <div class="img-bg border-right-3" style="background-image:  url('<?= base_url() ?>image/profil/dion.jpg') ;"></div>
                         </div>
                     </div>
                 </div>
@@ -739,22 +739,22 @@
         </div>
         <div class="row mt-3">
             <div class="col-md-4 mt-2">
-                <img src="<?= base_url() ?>Image/testimoni/t1.png" class="img-fluid ">
+                <img src="<?= base_url() ?>image/testimoni/t1.png" class="img-fluid ">
             </div>
             <div class="col-md-4 mt-2">
-                <img src="<?= base_url() ?>Image/testimoni/t2.png" class="img-fluid ">
+                <img src="<?= base_url() ?>image/testimoni/t2.png" class="img-fluid ">
             </div>
             <div class="col-md-4 mt-2">
-                <img src="<?= base_url() ?>Image/testimoni/t3.png" class="img-fluid ">
+                <img src="<?= base_url() ?>image/testimoni/t3.png" class="img-fluid ">
             </div>
             <div class="col-md-4 mt-2">
-                <img src="<?= base_url() ?>Image/testimoni/t4.png" class="img-fluid">
+                <img src="<?= base_url() ?>image/testimoni/t4.png" class="img-fluid">
             </div>
             <div class="col-md-4 mt-2">
-                <img src="<?= base_url() ?>Image/testimoni/t5.png" class="img-fluid ">
+                <img src="<?= base_url() ?>image/testimoni/t5.png" class="img-fluid ">
             </div>
             <div class="col-md-4 mt-2">
-                <img src="<?= base_url() ?>Image/testimoni/t6.png" class="img-fluid ">
+                <img src="<?= base_url() ?>image/testimoni/t6.png" class="img-fluid ">
             </div>
         </div>
     </div>
@@ -764,7 +764,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 m-auto text-center">
-                <img src="<?= base_url() ?>Image/icon/garansi.png" class="img-fluid">
+                <img src="<?= base_url() ?>image/icon/garansi.png" class="img-fluid">
             </div>
             <div class="col-lg-9 m-auto">
                 <h3>Untuk masa garansi
