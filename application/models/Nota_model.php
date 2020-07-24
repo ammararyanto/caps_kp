@@ -526,6 +526,7 @@ class Nota_model extends CI_Model
         $this->db->select('transaksi_checklist.*, user.name, user.id');
         $this->db->from('transaksi_checklist');
         $this->db->where('id_parent', $id_komentar);
+        $this->db->order_by('id_komentar', 'asc');
         $this->db->join('user', 'user.id=transaksi_checklist.id_sender');
         return $this->db->get()->result_array();
     }
