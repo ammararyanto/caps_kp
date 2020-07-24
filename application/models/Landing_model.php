@@ -81,10 +81,11 @@ class Landing_model extends CI_Model
     {
         $cari_nota = $this->input->post('cari_nota', true);
         $this->db->where('id_transaksi', $cari_nota);
-        $this->db->select('*');
+        $this->db->select('log_transaksi.*, user.name');
         $this->db->from('log_transaksi');
-        $this->db->join('status_pembayaran', 'status_pembayaran.id=log_transaksi.sPembayaran');
-        $this->db->join('status_pengerjaan', 'status_pengerjaan.id=log_transaksi.sPengerjaan');
+        $this->db->order_by('log_transaksi.id', 'desc');
+        // $this->db->join('status_pembayaran', 'status_pembayaran.id=log_transaksi.sPembayaran');
+        // $this->db->join('status_pengerjaan', 'status_pengerjaan.id=log_transaksi.sPengerjaan');
         $this->db->join('user', 'user.id=log_transaksi.id_user');
         return $this->db->get()->result_array();
     }
@@ -101,10 +102,9 @@ class Landing_model extends CI_Model
         $this->db->join('product', 'product.id = product_platform.product_id');
         return $query = $this->db->get()->row_array();
     }
-    
+
     public function tampil_data()
     {
-    return $this->db->get('seo_jajal');
+        return $this->db->get('seo_jajal');
     }
-
 }

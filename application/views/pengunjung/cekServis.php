@@ -3,10 +3,10 @@
     <div class="bg-grey-trans">
         <div class="container">
             <div class="row txt-sm-center">
-                <div class="col-md-6 m-auto">
+                <div class="col-md-5 m-auto">
                     <img src="<?= base_url() ?>image/caps_logo.svg" class="img-fluid wow zoomIn">
                 </div>
-                <div class="col-md-6 m-auto">
+                <div class="col-md-7 m-auto">
                     <h2 class="txt-grey wow fadeInUp" data-wow-delay="1s">
                         Cek Status <span class="txt-blue">Servis Device Anda</span><br>
                     </h2>
@@ -39,15 +39,42 @@
                             </thead>
                             <tbody>
                                 <?php foreach ($detail as $nt) : ?>
-                                    <tr>
-                                        <td>
-                                            <?php $date = date('Y-m-d', $nt['datetime']);
-                                            echo longdate_indo($date);
-                                            ?>
-                                        </td>
-                                        <td><?= date('H:i', $nt['datetime']); ?></td>
-                                        <td><?= $nt['sPengerjaan'] ?> diproses oleh <?= $nt['name'] ?></td>
-                                    </tr>
+                                    <?php
+                                    if ($nt['sPengerjaan'] == 1) {
+                                        $kata = 'Sedang dalam pengecekan oleh ' . $nt['name'];
+                                    } elseif ($nt['sPengerjaan'] == 2) {
+                                        $kata = 'Menunggu konfirmasi anda untuk melakukan perbaikan';
+                                    } elseif ($nt['sPengerjaan'] == 3) {
+                                        $kata = 'Konfirmasi anda telah kami terima, proses perbaikan akan segera dikerjakan';
+                                    } elseif ($nt['sPengerjaan'] == 4) {
+                                        $kata = 'Sedang dalam proses perbaikan oleh ' . $nt['name'];
+                                    } elseif ($nt['sPengerjaan'] == 5) {
+                                        $kata = 'Proses perbaikan telah selesai, silahkan menyelesaikan pembayaran untuk mengambil gawai anda';
+                                    } elseif ($nt['sPengerjaan'] == 6) {
+                                        $kata = 'Proses perbaikan telah dibatalkan, silahkan datang ke Counter untuk mengambil gawai anda';
+                                    } elseif ($nt['sPengerjaan'] == 7) {
+                                        $kata = 'Pembayaran telah selesai dan Gawai sudah di terima oleh pemilik';
+                                    } elseif ($nt['sPengerjaan'] == 8) {
+                                        $kata = 'Gawai telah diterima oleh pemilik';
+                                    } else {
+                                        $kata = '';
+                                    }
+
+                                    ?>
+                                    <?php if ($nt['sPengerjaan'] == 5 && $nt['sPembayaran'] >= 2) : ?>
+
+                                    <?php else : ?>
+                                        <tr>
+                                            <td>
+                                                <?php $date = date('Y-m-d', $nt['datetime']);
+                                                echo longdate_indo($date);
+                                                ?>
+                                            </td>
+                                            <td><?= date('H:i', $nt['datetime']); ?></td>
+                                            <td><?= $kata ?></td>
+                                        </tr>
+                                    <?php endif; ?>
+
                                 <?php endforeach; ?>
                             </tbody>
                         </table>

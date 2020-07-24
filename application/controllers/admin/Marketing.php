@@ -46,7 +46,7 @@ class Marketing extends CI_Controller
 
     public function belumDiambil()
     {
-        $data['tittle'] = "Harus di Konfirmasi";
+        $data['tittle'] = "Belum Diambil";
         $data['user'] = $this->db->get_where('user', ['email' =>
         $this->session->userdata('email')])->row_array();
 
@@ -60,7 +60,6 @@ class Marketing extends CI_Controller
         $this->load->view('admin/marketingPerluKonfirmasi', $data);
         $this->load->view('admin/footer');
     }
-
 
     public function lihatDetail($id_kerusakan)
     {
