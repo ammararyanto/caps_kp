@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 19, 2020 at 03:57 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.0
+-- Host: localhost:3306
+-- Generation Time: Jul 28, 2020 at 09:47 AM
+-- Server version: 5.7.31-log
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_caps_kp`
+-- Database: `slpatmdn_capskp`
 --
 
 -- --------------------------------------------------------
@@ -178,7 +178,8 @@ INSERT INTO `checklist` (`id`, `id_product`, `nama_checklist`) VALUES
 (36, 12, 'Sudah Pernah Bongkar'),
 (37, 12, 'Belum Pernah Bongkar'),
 (38, 12, 'Mati'),
-(39, 12, 'Nyala');
+(39, 12, 'Nyala'),
+(40, 21, 'Sudah Pernah Bongkar');
 
 -- --------------------------------------------------------
 
@@ -929,7 +930,27 @@ INSERT INTO `log_transaksi` (`id`, `id_transaksi`, `id_user`, `datetime`, `sPemb
 (831, 71720004, 23, 1594953695, 99, 5),
 (832, 71720004, 23, 1594953699, 99, 7),
 (833, 71720003, 23, 1594953720, 99, 5),
-(834, 71720003, 23, 1594953726, 99, 7);
+(834, 71720003, 23, 1594953726, 99, 7),
+(835, 71720002, 1, 1595179882, 1, 2),
+(836, 71720002, 1, 1595179891, 1, 4),
+(837, 71720002, 1, 1595180626, 1, 5),
+(838, 71720007, 1, 1595180667, 99, 5),
+(839, 71720007, 1, 1595180682, 99, 7),
+(840, 72720001, 26, 1595833944, 1, 1),
+(841, 72720002, 25, 1595835240, 1, 1),
+(842, 72720002, 26, 1595835944, 1, 2),
+(843, 72720002, 25, 1595836310, 1, 3),
+(844, 72720002, 26, 1595836457, 1, 4),
+(845, 72720002, 26, 1595836628, 1, 2),
+(846, 72720002, 26, 1595836675, 1, 4),
+(847, 72720002, 26, 1595836722, 1, 5),
+(848, 72720002, 25, 1595837151, 1, 5),
+(849, 72720002, 25, 1595837206, 2, 5),
+(850, 72720002, 25, 1595837241, 99, 5),
+(851, 72720002, 25, 1595837272, 99, 7),
+(852, 72720001, 26, 1595837463, 1, 2),
+(853, 72720001, 26, 1595837583, 1, 6),
+(854, 72720001, 25, 1595838845, 3, 8);
 
 -- --------------------------------------------------------
 
@@ -944,6 +965,16 @@ CREATE TABLE `notif_comment` (
   `notif_read` tinyint(1) NOT NULL,
   `NR_dateupdate` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `notif_comment`
+--
+
+INSERT INTO `notif_comment` (`id_Ncomment`, `id_TrnsCmnt`, `id_UComment`, `notif_read`, `NR_dateupdate`) VALUES
+(1, 72720001, 26, 1, '2020-07-27 14:12:57'),
+(2, 72720001, 25, 1, '2020-07-27 14:13:15'),
+(3, 72720002, 25, 1, '2020-07-27 14:46:25'),
+(4, 72720002, 26, 1, '2020-07-27 14:51:07');
 
 -- --------------------------------------------------------
 
@@ -1085,7 +1116,9 @@ INSERT INTO `pelanggan` (`id`, `is_member`, `id_member`, `nama_pelanggan`, `no_h
 (202, 0, 1594949967, 'Pamungkas', '89771661551', 'Jakarta'),
 (203, 0, 1594950041, 'Via Vallen', '87227482826', 'Bojonegoro'),
 (204, 0, 1594950104, 'Dion Wiyoko', '81662776456', 'Semarang'),
-(205, 0, 1594950293, 'Cut Syifa', '87661551441', 'Tangerang');
+(205, 0, 1594950293, 'Cut Syifa', '87661551441', 'Tangerang'),
+(206, 0, 1595834049, 'Mister S', '81239348948', 'Purwokerto'),
+(207, 0, 1595835213, 'Denny', '89114551661', 'Purwokerto');
 
 -- --------------------------------------------------------
 
@@ -1114,7 +1147,8 @@ INSERT INTO `product` (`id`, `product`, `image`) VALUES
 (17, 'iPad Mini', 'ipad-mini-5gen.jpg'),
 (18, 'iPad Air', 'ipad-air-3gen.jpg'),
 (19, 'iPad Pro', 'ios12-ipad-pro-12-9-in.jpg'),
-(20, 'Macbook', 'macbook-2018-gold-device.jpg');
+(20, 'Macbook', 'macbook-2018-gold-device.jpg'),
+(21, 'Apple Glass', 'default.png');
 
 -- --------------------------------------------------------
 
@@ -1387,17 +1421,19 @@ CREATE TABLE `stok` (
 --
 
 INSERT INTO `stok` (`id_barang`, `nama_barang`, `id_tipepenjualan`, `id_Pemasok`, `foto`, `harga_beli`, `harga_jual`, `fee_teknisi`, `stok_barang`) VALUES
-('SRVBB6G', 'Speaker Kamera Iphone', 1, 0, 'speaker_kamera_iphone.jpg', 45000, 60000, 0, 18),
-('SRVBC5G', 'Kamera Belakang Iphone', 1, 0, 'Kamera_Belakang_Iphone1.jpg', 75000, 100000, 0, 18),
+('SRVBB6G', 'Speaker Kamera Iphone', 1, 0, 'speaker_kamera_iphone.jpg', 45000, 60000, 0, 17),
+('SRVBC5G', 'Kamera Belakang Iphone', 1, 0, 'Kamera_Belakang_Iphone1.jpg', 75000, 100000, 0, 17),
 ('SRVBCKP16', 'Backup Data 16GB', 1, 0, 'service.png', 0, 50000, 0, 19),
 ('SRVFC5S', 'Kamera Depan Iphone', 1, 0, 'kamera_depan.jpg', 75000, 110000, 0, 18),
 ('SRVFLC5G', 'FL Charger', 1, 0, 'fl_charger_iphone.jpg', 50000, 70000, 0, 18),
 ('SRVFLCX', 'Flexible Charger', 1, 0, 'flexible_charger.jpg', 400000, 550000, 0, 18),
 ('SRVHB4GB', 'Home Button', 1, 0, 'home_button.jpg', 25000, 35000, 0, 20),
+('SRVHS7PBM', 'Housing 7P Black Mate', 1, 0, '', 400000, 1500000, 0, 1),
 ('SRVICLD1ALL', 'Seting iCloud', 1, 0, 'service1.png', 0, 100000, 0, 18),
 ('SRVIP4LCDB', 'LCD iPhone', 1, 0, 'iphone_lcd.jpg', 275000, 350000, 0, 20),
 ('SRVIP5PBATT', 'Batre iPhone', 1, 0, 'battery_iphone.jpg', 175000, 250000, 15000, 19),
-('SRVIP6RST', 'Restore Itunes 5C UT 6P', 1, 0, 'service2.png', 0, 75000, 0, 100),
+('SRVIP6RST', 'Restore Itunes 5C UT 6P', 1, 0, 'service2.png', 0, 75000, 0, 0),
+('SRVLCDIPXR', 'LCD iPhone XR', 1, 0, '1_17_264.jpg', 800000, 3500000, 0, 9),
 ('SRVSKT5', 'Soket Batre iPhone 5 5s 5C', 1, 0, 'iphone-7-hq-li-ion-replacement-battery-1960mah-with-connector-1.jpg', 0, 50000, 0, 29),
 ('SRVTE6SP', 'Taptic Enggine 6SP', 1, 0, 'taptic_engine_iphone.jpg', 235000, 300000, 0, 19);
 
@@ -1456,12 +1492,14 @@ INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `id_user`, `id_teknisi`
 (71620001, 1594912514, 23, 22, 'IPX0045', '2020-07-16 22:13:11', '2020-07-16 22:32:29', '2020-07-16 22:34:08', 17, 3, 50000, 0, 0, 560000, 610000, -50000, 560000, 99, 7),
 (71620002, 1594912602, 23, 22, 'IPV0078', '2020-07-16 22:14:39', '2020-07-17 09:33:45', '0000-00-00 00:00:00', 21, 2, 0, 0, 0, 0, 180000, 0, 180000, 1, 5),
 (71720001, 1594949290, 23, 23, 'IP223XX', '2020-07-17 08:26:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 18, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1),
-(71720002, 1594949545, 23, 23, '', '2020-07-17 08:30:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 12, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1),
+(71720002, 1594949545, 23, 1, '', '2020-07-17 08:30:22', '2020-07-20 00:43:46', '0000-00-00 00:00:00', 12, 1, 0, 0, 0, 0, 100000, 0, 100000, 1, 5),
 (71720003, 1594949688, 23, 22, '089551662775', '2020-07-17 08:32:45', '2020-07-17 09:33:35', '2020-07-17 09:42:06', 14, 2, 0, 0, 0, 300000, 300000, 0, 300000, 99, 7),
 (71720004, 1594949967, 23, 22, '', '2020-07-17 08:37:24', '2020-07-17 09:33:57', '2020-07-17 09:41:39', 19, 4, 0, 0, 0, 750000, 750000, 0, 750000, 99, 7),
 (71720005, 1594950041, 23, 22, 'IPYY615', '2020-07-17 08:38:38', '2020-07-17 08:53:52', '2020-07-17 09:40:17', 15, 5, 75000, 0, 0, 315000, 390000, 0, 315000, 99, 7),
 (71720006, 1594950104, 23, 23, 'IPOOU881', '2020-07-17 08:39:41', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 10, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1),
-(71720007, 1594950293, 23, 22, 'IPKKO112233', '2020-07-17 08:42:50', '2020-07-17 09:33:22', '0000-00-00 00:00:00', 20, 2, 0, 0, 0, 0, 400000, 0, 400000, 1, 5);
+(71720007, 1594950293, 23, 22, 'IPKKO112233', '2020-07-17 08:42:50', '2020-07-17 09:33:22', '2020-07-20 00:44:42', 20, 2, 0, 0, 1, 400000, 400000, 0, 400000, 99, 7),
+(72720001, 1595834049, 26, 26, '12398439845298', '2020-07-27 14:12:06', '2020-07-27 15:13:03', '2020-07-27 15:34:05', 18, 1, 0, 0, 0, 0, 0, 0, 0, 3, 8),
+(72720002, 1595835213, 25, 26, 'IPX0111', '2020-07-27 14:31:30', '2020-07-27 14:58:42', '2020-07-27 15:07:52', 17, 2, 500000, 0, 0, 3060000, 3560000, 0, 3060000, 99, 7);
 
 -- --------------------------------------------------------
 
@@ -1494,7 +1532,14 @@ INSERT INTO `transaksi_checklist` (`id_komentar`, `id_parent`, `id_transaksi`, `
 (154, 150, 71720004, 22, '', '', 'Kamera rusak parah, tidak bisa diperbaiki. harus ganti', 1594952272),
 (155, 154, 71720004, 22, '', '', 'Charger ternyata juga bermasalah', 1594952298),
 (156, 154, 71720004, 23, '', '', 'oke', 1594952335),
-(157, 154, 71720004, 23, '', '', 'Servis dilanjutkan, konfirmasi dari customer', 1594952358);
+(157, 154, 71720004, 23, '', '', 'Servis dilanjutkan, konfirmasi dari customer', 1594952358),
+(158, 0, 72720001, 26, '1', '', 'matot', 1595833926),
+(159, 158, 72720001, 25, '', '', 'yakin mati?', 1595833977),
+(160, 158, 72720001, 26, '', '', 'yakin mati itu', 1595833995),
+(161, 0, 72720002, 25, '1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16', '2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27', 'passcode 123456', 1595836707),
+(162, 161, 72720002, 26, '', '', 'oke siap dikerjakan', 1595835662),
+(163, 161, 72720002, 26, '', '', 'harus ganti lcd sudah parah', 1595835985),
+(164, 161, 72720002, 25, '', '', 'service lanjut', 1595836267);
 
 -- --------------------------------------------------------
 
@@ -1536,7 +1581,11 @@ INSERT INTO `transaksi_detail` (`id`, `id_teknisi`, `id_transakasi`, `id_barang`
 (277, 22, 71720005, 'SRVFLC5G', 1, 70000, 70000, 1594950567, 1),
 (278, 22, 71720004, 'SRVBC5G', 1, 100000, 100000, 1594952212, 1),
 (279, 22, 71720004, 'SRVBB6G', 1, 60000, 60000, 1594952214, 2),
-(280, 22, 71720004, 'SRVICLD1ALL', 1, 100000, 100000, 1594952229, 1);
+(280, 22, 71720004, 'SRVICLD1ALL', 1, 100000, 100000, 1594952229, 1),
+(281, 1, 71720002, 'SRVBC5G', 1, 100000, 100000, 1595179879, 1),
+(282, 26, 72720002, 'SRVLCDIPXR', 1, 3500000, 3500000, 1595835914, 1),
+(284, 26, 72720002, 'SRVBB6G', 1, 60000, 60000, 1595836605, 1),
+(285, 26, 72720001, 'SRVBC5G', 1, 100000, 100000, 1595837460, 2);
 
 -- --------------------------------------------------------
 
@@ -1560,11 +1609,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(1, 'Masadi Dwi Kurniawan', 'slpatmdnt@gmail.com', 'chrome3.png', '$2y$10$At7/oXTqX0hqm47/zQsZ0OfVUmPf6tfarp2Qiyam2LggWcn8Pnj.m', 1, 1, 1565687141),
-(20, 'Ammar Sholeh Aryanto', 'aryanto@caps.com', 'ammar.jpg', '$2y$10$evf0F22khZrEb1zRhzSJ6eeqw72ed7hM5Q96ZrPKKX2PMcuYSkXiq', 1, 1, 1588910321),
+(1, 'Masadi Dwi Kurniawan', 'slpatmdnt@gmail.com', 'photo_2020-06-15_16-07-09.jpg', '$2y$10$At7/oXTqX0hqm47/zQsZ0OfVUmPf6tfarp2Qiyam2LggWcn8Pnj.m', 1, 1, 1565687141),
 (22, 'Galih', 'galih@caps.com', 'default.png', '$2y$10$QX5yWVcUE9zvewqQbIJI8uZZrRF/L5xcxSiNkjA1JHvSUZRu8FAyq', 9, 1, 1589613985),
 (23, 'Novel', 'novel@caps.com', 'default.png', '$2y$10$3EOb1UfRogSG2lZWyMwFLOE9dJchIWZGxYHPXPV68F3tEervP0kPi', 8, 1, 1594900268),
-(24, 'Tatang', 'tatang@caps.com', 'default.png', '$2y$10$J5H4WDtJaD/vDsEEeIn3eea4juJlgPOt2zAs5I2yJCYZhW.gpES4S', 9, 1, 1594900752);
+(24, 'Tatang', 'tatang@caps.com', 'default.png', '$2y$10$J5H4WDtJaD/vDsEEeIn3eea4juJlgPOt2zAs5I2yJCYZhW.gpES4S', 9, 1, 1594900752),
+(25, 'Ammar Sholeh Aryanto', 'ammar@gmail.com', 'Ammarx.jpg', '$2y$10$3vtHtFvDS7UEw.h.GBuAzuaCiKcmk2sFPJgoKlFf5xXb1yhJVbalm', 8, 1, 1595833711),
+(26, 'Masadi Dwi Kurniawan', 'masadi@gmail.com', 'photo_2020-06-15_16-07-091.jpg', '$2y$10$KttRaJKAwxqnBFQ.0bXnXeDe3KN/6zCwTllDClac42UEA.WsjWetm', 9, 1, 1595833730);
 
 -- --------------------------------------------------------
 
@@ -1706,7 +1756,7 @@ INSERT INTO `user_sub_menu` (`id`, `menu_id`, `tittle`, `url`, `is_active`) VALU
 (25, 6, 'Diambil', 'admin/kasir/notaDiambil', 0),
 (26, 6, 'Semua Transaksi', 'admin/kasir/semuaTransaksi', 0),
 (28, 6, 'Kasir Dashboard', 'admin/kasir', 1),
-(29, 9, 'Riwayat Servis Selesai', 'admin/teknisi/riwayatServisSelesai', 1);
+(29, 9, 'Riwayat Servis Selesai', 'admin/teknisi/riwayatServisSelesai', 0);
 
 -- --------------------------------------------------------
 
@@ -1731,6 +1781,14 @@ CREATE TABLE `who_comment` (
   `id_Tcomment` int(11) NOT NULL,
   `id_commenter` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `who_comment`
+--
+
+INSERT INTO `who_comment` (`id_Wcomment`, `id_Tcomment`, `id_commenter`) VALUES
+(1, 72720001, '26,25'),
+(2, 72720002, '25,26');
 
 -- --------------------------------------------------------
 
@@ -2173,7 +2231,7 @@ ALTER TABLE `booking`
 -- AUTO_INCREMENT for table `checklist`
 --
 ALTER TABLE `checklist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `log_stock`
@@ -2185,25 +2243,25 @@ ALTER TABLE `log_stock`
 -- AUTO_INCREMENT for table `log_transaksi`
 --
 ALTER TABLE `log_transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=835;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=855;
 
 --
 -- AUTO_INCREMENT for table `notif_comment`
 --
 ALTER TABLE `notif_comment`
-  MODIFY `id_Ncomment` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Ncomment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=206;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `product_platform`
@@ -2233,19 +2291,19 @@ ALTER TABLE `tipe_penjualan`
 -- AUTO_INCREMENT for table `transaksi_checklist`
 --
 ALTER TABLE `transaksi_checklist`
-  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
 
 --
 -- AUTO_INCREMENT for table `transaksi_detail`
 --
 ALTER TABLE `transaksi_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=281;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=286;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
@@ -2275,7 +2333,7 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT for table `who_comment`
 --
 ALTER TABLE `who_comment`
-  MODIFY `id_Wcomment` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Wcomment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
