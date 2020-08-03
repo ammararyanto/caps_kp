@@ -76,9 +76,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'slpatmdn_bakugo',
-	'password' => '-rQNaR#Om=}_',
-	'database' => 'slpatmdn_capskp',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'db_caps_kp',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
